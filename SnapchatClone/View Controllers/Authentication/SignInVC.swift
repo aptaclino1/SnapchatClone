@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  SignInVC.swift
 //  SnapchatClone
 //
-//  Created by Messiah on 11/9/23.
+//  Created by Messiah on 11/10/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
+    
 
 }
-
