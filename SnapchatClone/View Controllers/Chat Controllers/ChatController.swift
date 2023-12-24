@@ -9,80 +9,105 @@ import Firebase
 
 class ChatController: UIViewController {
 
-    @IBOutlet weak var chatTable: UITableView!
-    var users: [ChatUser] = []  // Assuming you have a list of ChatUser instances
+   
+   @IBOutlet weak var chatTable: UITableView!
+   var user2UID: String?
+   
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Assuming you have a list of ChatUser instances
-        users = [
-            ChatUser(senderId: "user1UID", displayName: "User 1"),
-            ChatUser(senderId: "user2UID", displayName: "User 2"),
-            // Add more users as needed
-        ]
-    }
+   override func viewDidLoad() {
+       super.viewDidLoad()
+       let backgroundImage = UIImageView(frame: self.view.bounds)
+       backgroundImage.image = UIImage(named: "background")
+       backgroundImage.contentMode = .scaleAspectFill
+       self.view.addSubview(backgroundImage)
+       self.view.sendSubviewToBack(backgroundImage)
+       chatTable.backgroundColor = .clear
+   }
 }
 
 extension ChatController: UITableViewDelegate, UITableViewDataSource {
+   
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+       return 1
+   }
+   
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       let cell = chatTable.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatCell
+       
+       let otherUsername = "Viper"
+       cell.textLabel?.text = otherUsername
+       cell.accessoryType = .disclosureIndicator
+       
+       if let user2UID = user2UID {
+           fetchUserInfo(uid: user2UID) { (userData: [String: Any]?) in
+               if let username = userData?["displayName"] as? String {
+                   DispatchQueue.main.async {
+                       cell.textLabel?.text = username
+                   }
+               } else {
+                   
+                   DispatchQueue.main.async {
+                       cell.textLabel?.text = " "
+                   }
+               }
+           }
+       } else {
+          
+           cell.textLabel?.text = "Chat"
+           cell.textLabel?.font = UIFont(name: "Avenir-BlackOblique", size: 25)
+           cell.textLabel?.textColor = .gray
+           
+       }
+       cell.backgroundColor = .yellow
+       return cell
+   }
+   
+   
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       tableView.deselectRow(at: indexPath, animated: true)
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of chats you want to display
-        return users.count
-    }
+       
+       let vc = ChatVC()
+       vc.user2UID = "w3I1z2awS6S9aLP8zPG4ZaZN4kg2"
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = chatTable.dequeueReusableCell(withIdentifier: "ChatCell", for: indexPath) as! ChatCell
+       guard let user2UID = vc.user2UID else {
+           print("Error: user2UID is nil.")
+           return
+       }
 
-        let user = users[indexPath.row]
-        cell.textLabel?.text = user.displayName
-        cell.accessoryType = .disclosureIndicator
+       vc.fetchUserInfo(uid: user2UID) { userData in
+           if let username = userData?["displayName"] as? String {
+               vc.user2Name = username
+           }
 
-        return cell
-    }
+           // Ensure to update the UI on the main thread
+           DispatchQueue.main.async {
+               self.navigationController?.pushViewController(vc, animated: true)
+           }
+       }
+   }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        let selectedUser = users[indexPath.row]
-
-        if let existingChatVC = navigationController?.viewControllers.first(where: { $0 is ChatVC && ( $0 as! ChatVC).user2UID == selectedUser.senderId }) as? ChatVC {
-            // ChatVC instance already exists for the selected user
-            navigationController?.popToViewController(existingChatVC, animated: true)
-        } else {
-            // ChatVC instance doesn't exist, create a new one
-            let vc = ChatVC()
-            vc.user2UID = selectedUser.senderId
-
-            vc.fetchUserInfo(uid: selectedUser.senderId) { userData in
-                vc.otherUser = userData
-            }
-
-            navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-
-
-    func fetchUserInfo(uid: String, completion: @escaping ([String: Any]?) -> Void) {
-        let userRef = Firestore.firestore().collection("UserInfo").document(uid)
-
-        userRef.getDocument { (snapshot, error) in
-            if let error = error {
-                print("Error fetching user info: \(error.localizedDescription)")
-                completion(nil)
-                return
-            }
-
-            guard let snapshot = snapshot, snapshot.exists else {
-                print("Snapshot does not exist or is nil for UID: \(uid)")
-                completion(nil)
-                return
-            }
-
-            let userData = snapshot.data() ?? [:]
-
-            // Ensure the completion block is called on the main thread
-            completion(userData)
-        }
-    }
+   func fetchUserInfo(uid: String, completion: @escaping ([String: Any]?) -> Void) {
+       let userRef = Firestore.firestore().collection("UserInfo").document(uid)
+       
+       userRef.getDocument { (snapshot, error) in
+           if let error = error {
+               print("Error fetching user info: \(error.localizedDescription)")
+               completion(nil)
+               return
+           }
+           
+           guard let snapshot = snapshot, snapshot.exists else {
+               print("Snapshot does not exist or is nil for UID: \(uid)")
+               completion(nil)
+               return
+           }
+           
+           let userData = snapshot.data() ?? [:]
+           
+          
+           completion(userData)
+       }
+   }
 }

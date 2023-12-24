@@ -12,12 +12,12 @@ class TabVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Remove default tab bar border and background
+        
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
         tabBar.tintColor = .white
 
-        // Create and add a circular background view
+        
         let circularBackground = CircularBackground(frame: tabBar.bounds)
         circularBackground.backgroundColor = .clear
         tabBar.addSubview(circularBackground)
@@ -29,16 +29,21 @@ class TabVC: UITabBarController {
         tabBar.addSubview(floatingItemBar)
         tabBar.bringSubviewToFront(floatingItemBar)
 
-        // Customize your tab bar items as needed
+       
         let item1 = UITabBarItem(title: nil, image: UIImage(systemName: "house.fill"), selectedImage: nil)
         let item2 = UITabBarItem(title: nil, image: UIImage(named: "chatfill1"), selectedImage: nil)
         let item3 = UITabBarItem(title: nil, image: UIImage(systemName: "photo.fill")?.withRenderingMode(.alwaysOriginal), selectedImage: nil)
-        let item4 = UITabBarItem(title: nil, image: UIImage(systemName: "gearshape.fill")?.withRenderingMode(.alwaysOriginal), selectedImage: nil)
+        let item4 = UITabBarItem(title: nil, image: UIImage(systemName: "play.fill")?.withRenderingMode(.alwaysOriginal), selectedImage: nil)
+        let item5 = UITabBarItem(title: nil, image: UIImage(systemName: "gearshape.fill")?.withRenderingMode(.alwaysOriginal), selectedImage: nil)
+      
+
 
         viewControllers?[0].tabBarItem = item1
         viewControllers?[1].tabBarItem = item2
         viewControllers?[2].tabBarItem = item3
         viewControllers?[3].tabBarItem = item4
+        viewControllers?[4].tabBarItem = item5
+        
     }
 }
 
@@ -93,7 +98,10 @@ class FloatingItemBar: UIView {
             case 2:
                 imageName = itemButton.isSelected ? "photo.fill" : "photo"
             case 3:
+                imageName = itemButton.isSelected ? "play.fill" : "play"
+            case 4:
                 imageName = itemButton.isSelected ? "gearshape.fill" : "gearshape"
+        
             default:
                 return
             }

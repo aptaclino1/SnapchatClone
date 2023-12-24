@@ -122,6 +122,8 @@ extension FeedVc: UITableViewDelegate, UITableViewDataSource {
          let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
         cell.backgroundColor = .clear
         cell.usernameLabel.text = snapArray[indexPath.row].username
+        cell.usernameLabel.font = UIFont(name: "Avenir-BlackOblique", size: 25)
+        cell.usernameLabel.textColor = .gray
         cell.userImage.sd_setImage(with: URL(string: snapArray[indexPath.row].imageUrlArray[0]))
          return cell
      }

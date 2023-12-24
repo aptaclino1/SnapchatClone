@@ -24,7 +24,7 @@ class ChatVC: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDat
     var messages: [Message] = []
     var otherUser: [String: Any]? {
             didSet {
-                // Update UI when otherUser is set
+                
                 updateUIWithOtherUserData()
             }
         }
@@ -35,7 +35,7 @@ class ChatVC: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDat
         if let currentUser = Auth.auth().currentUser {
             self.currentUser = currentUser
         } else {
-            // Handle the case where the user is not authenticated
+         
             print("Error: Current user is nil.")
             return
         }
@@ -64,14 +64,14 @@ class ChatVC: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDat
         loadChat()
     }
     private func updateUIWithOtherUserData() {
-        // Update UI elements using otherUser data
+      
         if let otherUsername = otherUser?["displayName"] as? String {
             self.title = otherUsername
         }
 
-        // Optionally, update other UI elements based on otherUser data
+        
     }
-    // MARK: - Custom messages handlers
+  
 
     func createNewChat() {
         if let currentUser = currentUser, let user2UID = user2UID {

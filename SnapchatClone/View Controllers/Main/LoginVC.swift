@@ -27,11 +27,14 @@ class LoginVC: UIViewController {
         self.view.sendSubviewToBack(backgroundImage)
     }
     @IBAction func signUpButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "toSignUp1", sender: nil)
+       
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as! SignUpVC
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func logInButton(_ sender: UIButton) {
-     performSegue(withIdentifier: "toSignIn", sender: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
