@@ -86,7 +86,7 @@ class SignInVC: UIViewController {
     }
 }
 
-// MARK: - UITextFieldDelegate
+// MARK:  UITextFieldDelegate
 extension SignInVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
