@@ -20,7 +20,7 @@
 		8C3EFE2E2B0533A9005264C7 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3EFE2D2B0533A9005264C7 /* ChatCell.swift */; };
 		8C3EFE302B0542FF005264C7 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3EFE2F2B0542FF005264C7 /* FirebaseDatabase.framework */; };
 		8C3EFE322B054308005264C7 /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3EFE312B054308005264C7 /* InputBarAccessoryView.framework */; };
-		8C84AD752B170060002800EB /* ReelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C84AD742B170060002800EB /* ReelsVC.swift */; };
+		8C4EE5E82B47884600FFB7C6 /* ReelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4EE5E72B47884600FFB7C6 /* ReelsVC.swift */; };
 		8C84AD792B1700A9002800EB /* Reels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C84AD782B1700A9002800EB /* Reels.swift */; };
 		8C84AD7B2B170263002800EB /* ReelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C84AD7A2B170263002800EB /* ReelsCell.swift */; };
 		8C84AD7D2B179135002800EB /* Pexels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C84AD7C2B179135002800EB /* Pexels.swift */; };
@@ -62,7 +62,7 @@
 		8C3EFE2D2B0533A9005264C7 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		8C3EFE2F2B0542FF005264C7 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3EFE312B054308005264C7 /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = InputBarAccessoryView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C84AD742B170060002800EB /* ReelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReelsVC.swift; path = "SnapchatClone/View Controllers/Main/ReelsVC.swift"; sourceTree = SOURCE_ROOT; };
+		8C4EE5E72B47884600FFB7C6 /* ReelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsVC.swift; sourceTree = "<group>"; };
 		8C84AD782B1700A9002800EB /* Reels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reels.swift; sourceTree = "<group>"; };
 		8C84AD7A2B170263002800EB /* ReelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsCell.swift; sourceTree = "<group>"; };
 		8C84AD7C2B179135002800EB /* Pexels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pexels.swift; sourceTree = "<group>"; };
@@ -125,9 +125,9 @@
 				8CFB7A782AFD4DB3007B5331 /* SnapVC.swift */,
 				8C3EFE1A2B033C24005264C7 /* TabVC.swift */,
 				8CFB7A552AFCFE3A007B5331 /* LoginVC.swift */,
+				8C4EE5E72B47884600FFB7C6 /* ReelsVC.swift */,
 				8CFB7A6F2AFD0EEA007B5331 /* UploadVC.swift */,
 				8CFB7A712AFD0EF5007B5331 /* FeedVc.swift */,
-				8C84AD742B170060002800EB /* ReelsVC.swift */,
 				8CFB7A732AFD0F04007B5331 /* SettingsVc.swift */,
 			);
 			path = Main;
@@ -209,7 +209,7 @@
 				8CFB7A532AFCFE3A007B5331 /* SceneDelegate.swift */,
 				8CFB7A572AFCFE3A007B5331 /* Main.storyboard */,
 				8CCDA57A2B007E5400B9CF78 /* Model */,
-				8CFB7A752AFD0F13007B5331 /* View Controllers */,
+				8CFB7A752AFD0F13007B5331 /* Controllers */,
 				8CFB7A5A2AFCFE3C007B5331 /* Assets.xcassets */,
 				8CFB7A5C2AFCFE3C007B5331 /* LaunchScreen.storyboard */,
 				8CFB7A5F2AFCFE3C007B5331 /* Info.plist */,
@@ -218,14 +218,14 @@
 			path = SnapchatClone;
 			sourceTree = "<group>";
 		};
-		8CFB7A752AFD0F13007B5331 /* View Controllers */ = {
+		8CFB7A752AFD0F13007B5331 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8CFB7A7E2AFDE3BC007B5331 /* Authentication */,
 				8C3EFE2A2B052C3E005264C7 /* Main */,
 				8C84AD732B170001002800EB /* Chat Controllers */,
 			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		8CFB7A7E2AFDE3BC007B5331 /* Authentication */ = {
@@ -391,13 +391,13 @@
 				8CFB7A7B2AFDE2DA007B5331 /* SignInVC.swift in Sources */,
 				8CFB7A792AFD4DB3007B5331 /* SnapVC.swift in Sources */,
 				8C3EFE252B0509D6005264C7 /* Message.swift in Sources */,
+				8C4EE5E82B47884600FFB7C6 /* ReelsVC.swift in Sources */,
 				8C84AD7D2B179135002800EB /* Pexels.swift in Sources */,
 				8C3EFE1B2B033C24005264C7 /* TabVC.swift in Sources */,
 				8CFB7A742AFD0F04007B5331 /* SettingsVc.swift in Sources */,
 				8CFB7A522AFCFE3A007B5331 /* AppDelegate.swift in Sources */,
 				8C84AD792B1700A9002800EB /* Reels.swift in Sources */,
 				8CFB7A722AFD0EF5007B5331 /* FeedVc.swift in Sources */,
-				8C84AD752B170060002800EB /* ReelsVC.swift in Sources */,
 				8C84AD7B2B170263002800EB /* ReelsCell.swift in Sources */,
 				8C3EFE192B033655005264C7 /* ChatVC.swift in Sources */,
 				8C3EFE2E2B0533A9005264C7 /* ChatCell.swift in Sources */,

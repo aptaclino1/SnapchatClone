@@ -1,10 +1,9 @@
 //
-//  ReelsController.swift
+//  ReelsVC.swift
 //  SnapchatClone
 //
-//  Created by Messiah on 11/29/23.
+//  Created by Messiah on 1/5/24.
 //
-
 import AVKit
 import UIKit
 
@@ -102,3 +101,4 @@ extension ReelsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
        
     }
 }
+
