@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SDWebImage
 
-class FeedVc: UIViewController{
+class FeedVC: UIViewController{
 
 
     @IBOutlet weak var feedTable: UITableView!
@@ -113,7 +113,7 @@ class FeedVc: UIViewController{
     }
 }
 
-extension FeedVc: UITableViewDelegate, UITableViewDataSource {
+extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return snapArray.count
     }

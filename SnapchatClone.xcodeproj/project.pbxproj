@@ -39,8 +39,8 @@
 		8CFB7A6C2AFD0C71007B5331 /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFB7A6B2AFD0C71007B5331 /* FirebaseStorage.framework */; };
 		8CFB7A6E2AFD0C77007B5331 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFB7A6D2AFD0C77007B5331 /* FirebaseCore.framework */; };
 		8CFB7A702AFD0EEA007B5331 /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB7A6F2AFD0EEA007B5331 /* UploadVC.swift */; };
-		8CFB7A722AFD0EF5007B5331 /* FeedVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB7A712AFD0EF5007B5331 /* FeedVc.swift */; };
-		8CFB7A742AFD0F04007B5331 /* SettingsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB7A732AFD0F04007B5331 /* SettingsVc.swift */; };
+		8CFB7A722AFD0EF5007B5331 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB7A712AFD0EF5007B5331 /* FeedVC.swift */; };
+		8CFB7A742AFD0F04007B5331 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB7A732AFD0F04007B5331 /* SettingsVC.swift */; };
 		8CFB7A772AFD4D4F007B5331 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB7A762AFD4D4F007B5331 /* FeedCell.swift */; };
 		8CFB7A792AFD4DB3007B5331 /* SnapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB7A782AFD4DB3007B5331 /* SnapVC.swift */; };
 		8CFB7A7B2AFDE2DA007B5331 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB7A7A2AFDE2DA007B5331 /* SignInVC.swift */; };
@@ -86,8 +86,8 @@
 		8CFB7A6B2AFD0C71007B5331 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CFB7A6D2AFD0C77007B5331 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CFB7A6F2AFD0EEA007B5331 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
-		8CFB7A712AFD0EF5007B5331 /* FeedVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVc.swift; sourceTree = "<group>"; };
-		8CFB7A732AFD0F04007B5331 /* SettingsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVc.swift; sourceTree = "<group>"; };
+		8CFB7A712AFD0EF5007B5331 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		8CFB7A732AFD0F04007B5331 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		8CFB7A762AFD4D4F007B5331 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		8CFB7A782AFD4DB3007B5331 /* SnapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapVC.swift; sourceTree = "<group>"; };
 		8CFB7A7A2AFDE2DA007B5331 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -127,8 +127,9 @@
 				8CFB7A552AFCFE3A007B5331 /* LoginVC.swift */,
 				8C4EE5E72B47884600FFB7C6 /* ReelsVC.swift */,
 				8CFB7A6F2AFD0EEA007B5331 /* UploadVC.swift */,
-				8CFB7A712AFD0EF5007B5331 /* FeedVc.swift */,
-				8CFB7A732AFD0F04007B5331 /* SettingsVc.swift */,
+				8CFB7A712AFD0EF5007B5331 /* FeedVC.swift */,
+				8CFB7A732AFD0F04007B5331 /* SettingsVC.swift */,
+				8C3EFE182B033655005264C7 /* ChatVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -154,13 +155,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		8C84AD732B170001002800EB /* Chat Controllers */ = {
+		8C84AD732B170001002800EB /* Chat  */ = {
 			isa = PBXGroup;
 			children = (
-				8C3EFE182B033655005264C7 /* ChatVC.swift */,
 				8C3EFE282B052943005264C7 /* ChatController.swift */,
 			);
-			path = "Chat Controllers";
+			path = "Chat ";
 			sourceTree = "<group>";
 		};
 		8C84AD7E2B17A78E002800EB /* Chat */ = {
@@ -223,7 +223,7 @@
 			children = (
 				8CFB7A7E2AFDE3BC007B5331 /* Authentication */,
 				8C3EFE2A2B052C3E005264C7 /* Main */,
-				8C84AD732B170001002800EB /* Chat Controllers */,
+				8C84AD732B170001002800EB /* Chat  */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -393,10 +393,10 @@
 				8C3EFE252B0509D6005264C7 /* Message.swift in Sources */,
 				8C4EE5E82B47884600FFB7C6 /* ReelsVC.swift in Sources */,
 				8C3EFE1B2B033C24005264C7 /* TabVC.swift in Sources */,
-				8CFB7A742AFD0F04007B5331 /* SettingsVc.swift in Sources */,
+				8CFB7A742AFD0F04007B5331 /* SettingsVC.swift in Sources */,
 				8CFB7A522AFCFE3A007B5331 /* AppDelegate.swift in Sources */,
 				8C84AD792B1700A9002800EB /* Reels.swift in Sources */,
-				8CFB7A722AFD0EF5007B5331 /* FeedVc.swift in Sources */,
+				8CFB7A722AFD0EF5007B5331 /* FeedVC.swift in Sources */,
 				8C84AD7B2B170263002800EB /* ReelsCell.swift in Sources */,
 				8C3EFE192B033655005264C7 /* ChatVC.swift in Sources */,
 				8C3EFE2E2B0533A9005264C7 /* ChatCell.swift in Sources */,
