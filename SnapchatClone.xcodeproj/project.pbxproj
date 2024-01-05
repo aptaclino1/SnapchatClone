@@ -21,9 +21,9 @@
 		8C3EFE302B0542FF005264C7 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3EFE2F2B0542FF005264C7 /* FirebaseDatabase.framework */; };
 		8C3EFE322B054308005264C7 /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3EFE312B054308005264C7 /* InputBarAccessoryView.framework */; };
 		8C4EE5E82B47884600FFB7C6 /* ReelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4EE5E72B47884600FFB7C6 /* ReelsVC.swift */; };
+		8C64049D2B478B73004556F2 /* PexelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64049C2B478B73004556F2 /* PexelResponse.swift */; };
 		8C84AD792B1700A9002800EB /* Reels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C84AD782B1700A9002800EB /* Reels.swift */; };
 		8C84AD7B2B170263002800EB /* ReelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C84AD7A2B170263002800EB /* ReelsCell.swift */; };
-		8C84AD7D2B179135002800EB /* Pexels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C84AD7C2B179135002800EB /* Pexels.swift */; };
 		8CCDA5792B007E3800B9CF78 /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCDA5782B007E3800B9CF78 /* UserSingleton.swift */; };
 		8CCDA57C2B00A19800B9CF78 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCDA57B2B00A19800B9CF78 /* Snap.swift */; };
 		8CCDA57E2B00A50F00B9CF78 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCDA57D2B00A50F00B9CF78 /* SDWebImage.framework */; };
@@ -63,9 +63,9 @@
 		8C3EFE2F2B0542FF005264C7 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3EFE312B054308005264C7 /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = InputBarAccessoryView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4EE5E72B47884600FFB7C6 /* ReelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsVC.swift; sourceTree = "<group>"; };
+		8C64049C2B478B73004556F2 /* PexelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelResponse.swift; sourceTree = "<group>"; };
 		8C84AD782B1700A9002800EB /* Reels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reels.swift; sourceTree = "<group>"; };
 		8C84AD7A2B170263002800EB /* ReelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsCell.swift; sourceTree = "<group>"; };
-		8C84AD7C2B179135002800EB /* Pexels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pexels.swift; sourceTree = "<group>"; };
 		8CCDA5782B007E3800B9CF78 /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
 		8CCDA57B2B00A19800B9CF78 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		8CCDA57D2B00A50F00B9CF78 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,19 +133,9 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		8C3EFE2B2B052C8B005264C7 /* Snaps */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Snaps;
-			sourceTree = "<group>";
-		};
 		8C3EFE2C2B052CA5005264C7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				8C84AD7E2B17A78E002800EB /* Chat */,
-				8C3EFE2B2B052C8B005264C7 /* Snaps */,
-				8C84AD7C2B179135002800EB /* Pexels.swift */,
 				8CCDA5782B007E3800B9CF78 /* UserSingleton.swift */,
 				8CFB7A812AFE51E6007B5331 /* CustomTextField.swift */,
 			);
@@ -157,6 +147,9 @@
 			children = (
 				8C84AD782B1700A9002800EB /* Reels.swift */,
 				8CCDA57B2B00A19800B9CF78 /* Snap.swift */,
+				8C64049C2B478B73004556F2 /* PexelResponse.swift */,
+				8C84AD7E2B17A78E002800EB /* Chat */,
+				8C3EFE2C2B052CA5005264C7 /* Extension */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,7 +179,6 @@
 				8C3EFE2D2B0533A9005264C7 /* ChatCell.swift */,
 				8C84AD7A2B170263002800EB /* ReelsCell.swift */,
 				8C3EFE122B020F6C005264C7 /* SnapCell.swift */,
-				8C3EFE2C2B052CA5005264C7 /* Extension */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,7 +392,6 @@
 				8CFB7A792AFD4DB3007B5331 /* SnapVC.swift in Sources */,
 				8C3EFE252B0509D6005264C7 /* Message.swift in Sources */,
 				8C4EE5E82B47884600FFB7C6 /* ReelsVC.swift in Sources */,
-				8C84AD7D2B179135002800EB /* Pexels.swift in Sources */,
 				8C3EFE1B2B033C24005264C7 /* TabVC.swift in Sources */,
 				8CFB7A742AFD0F04007B5331 /* SettingsVc.swift in Sources */,
 				8CFB7A522AFCFE3A007B5331 /* AppDelegate.swift in Sources */,
@@ -410,6 +401,7 @@
 				8C3EFE192B033655005264C7 /* ChatVC.swift in Sources */,
 				8C3EFE2E2B0533A9005264C7 /* ChatCell.swift in Sources */,
 				8C3EFE232B050987005264C7 /* ChatUser.swift in Sources */,
+				8C64049D2B478B73004556F2 /* PexelResponse.swift in Sources */,
 				8CCDA5792B007E3800B9CF78 /* UserSingleton.swift in Sources */,
 				8CFB7A542AFCFE3A007B5331 /* SceneDelegate.swift in Sources */,
 				8CCDA57C2B00A19800B9CF78 /* Snap.swift in Sources */,
