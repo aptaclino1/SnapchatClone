@@ -136,9 +136,6 @@
 		8C3EFE2B2B052C8B005264C7 /* Snaps */ = {
 			isa = PBXGroup;
 			children = (
-				8C84AD782B1700A9002800EB /* Reels.swift */,
-				8CCDA57B2B00A19800B9CF78 /* Snap.swift */,
-				8C3EFE122B020F6C005264C7 /* SnapCell.swift */,
 			);
 			path = Snaps;
 			sourceTree = "<group>";
@@ -153,6 +150,15 @@
 				8CFB7A812AFE51E6007B5331 /* CustomTextField.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8C4EE5E92B47890500FFB7C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C84AD782B1700A9002800EB /* Reels.swift */,
+				8CCDA57B2B00A19800B9CF78 /* Snap.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8C84AD732B170001002800EB /* Chat Controllers */ = {
@@ -173,15 +179,16 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
-		8CCDA57A2B007E5400B9CF78 /* Model */ = {
+		8CCDA57A2B007E5400B9CF78 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				8CFB7A762AFD4D4F007B5331 /* FeedCell.swift */,
 				8C3EFE2D2B0533A9005264C7 /* ChatCell.swift */,
 				8C84AD7A2B170263002800EB /* ReelsCell.swift */,
+				8C3EFE122B020F6C005264C7 /* SnapCell.swift */,
 				8C3EFE2C2B052CA5005264C7 /* Extension */,
 			);
-			path = Model;
+			path = View;
 			sourceTree = "<group>";
 		};
 		8CFB7A452AFCFE3A007B5331 = {
@@ -208,7 +215,8 @@
 				8CFB7A512AFCFE3A007B5331 /* AppDelegate.swift */,
 				8CFB7A532AFCFE3A007B5331 /* SceneDelegate.swift */,
 				8CFB7A572AFCFE3A007B5331 /* Main.storyboard */,
-				8CCDA57A2B007E5400B9CF78 /* Model */,
+				8C4EE5E92B47890500FFB7C6 /* Model */,
+				8CCDA57A2B007E5400B9CF78 /* View */,
 				8CFB7A752AFD0F13007B5331 /* Controllers */,
 				8CFB7A5A2AFCFE3C007B5331 /* Assets.xcassets */,
 				8CFB7A5C2AFCFE3C007B5331 /* LaunchScreen.storyboard */,
